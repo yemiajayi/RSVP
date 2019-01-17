@@ -1,0 +1,161 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 50px;
+}
+
+#ourStoryRow {
+  background: url(ourStory.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position:center;
+  color:;
+  padding:20px;
+  line-height:1.6;
+}
+
+#ourStoryTitle, #ourStoryYemi, #ourStoryMolara {
+    background:black;
+    color:white;
+  padding:20px 40px 20px 40px;
+  font-family: 'Lobster Two', cursive;
+  opacity: 0.7;
+}
+
+#scheduleRow, #scheduleTitle {
+  background-color: #1c334a;
+  color:white;
+  padding-top:40px;
+}
+
+#qaRow {
+    background: url(gold2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    padding-top:40px;
+}
+
+#faq {
+    padding: 20px;
+    text-align:center;
+}
+
+#questions {
+    padding: 50px;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 70px;
+    padding: 0 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+label{
+  font-size: 20px;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height:80px;
+
+}
+
+.col-md-6 {
+    text-align: center;
+    padding-bottom:30px;
+}
+
+.col-md-4 {
+    text-align: center;
+}
+
+#indexRow {
+    background-color: #ffbfa7;
+}
+
+#rsvp {
+    padding: 10px 40px;
+}
+
+.table, .table-striped {
+    padding:20px;
+    text-align: left;
+}
+
+.btn, .btn-success {
+    margin: 20px;
+}
+
+#responses {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    margin-bottom:15px;
+}
+
+.item img {
+    width :100%;`
+}
+
+.img-fluid {
+    width :100%;
+    height: 100%;
+    margin: 10px 0;
+    box-shadow: 5px 10px 8px #4c4c4c;
+}
+
+.display-2 {
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+.glyphicon-user {
+    font-size: 40px;
+    color: #072807;
+}
+
+#indexBg {
+    padding:0;
+}
+
+#indexBg img {
+    width :100%;
+}
+
+#centered h1 {
+    position: absolute;
+    font-size:60px;
+    top: 25px;
+    left:30px;
+    text-shadow: 4px 4px 4px #aaa;
+    font-family: 'Tangerine', serif;
+}
+
+#bottom-right p {
+    color:white;
+    position: absolute;
+    font-size:40px;
+    bottom: 50px;
+    right: 30px;
+    font-family: 'Tangerine', serif;
+}
+
+.table th, .table td {
+     border-top: none !important;
+ }
+
+hr {
+     border: 0.5px inset #96999e;
+     margin: 0 50px;
+ }
+
+.bg-success {
+     padding: 20px 0;
+     font-size:20px;
+     font-style:italic;
+ }

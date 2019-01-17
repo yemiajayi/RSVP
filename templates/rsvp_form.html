@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% block title %}RSVP{% endblock %}
+{% block rsvp_active %}active{% endblock %}
+
+{% block body %}
+<div class="col-md-6" id="indexBg">
+    <!--<div id="iv">-->
+    <img src="../static/rsvpapp/indexBg.jpg">
+    <div id="centered">
+        <h1>Omolara & Yemi</h1>
+    </div>
+    <div id="bottom-right">
+        <p>Please join us to celebrate</br>
+        Saturday, July 14, 2018</p>
+    </div>
+    <!--</div>-->
+</div>
+
+<div class="col-md-6">
+
+
+    <div id="rsvp">
+        {% if messages %}
+        {% for message in messages %}
+                <div class="bg-success text-white">{{ message }}</div>
+                <script type="text/javascript">
+                    alert("We have received your response. Thanks!")
+                </script>
+        {% endfor %}
+        {% endif %}
+
+     <h2 class="display-2">RSVP Goes Here</h2>
+       {% if error_message %}
+           <p><strong>{{ error_message }}</strong></p>
+       {% endif %}
+
+       <form class="form-horizontal" action="{% url 'create_rsvp' %}" method="post" enctype="multipart/form-data">
+           {% csrf_token %}
+           {% include 'form_template.html' %}
+           <div class="form-group">
+               <button type="submit" class="btn btn-primary">Submit</button>
+           </div>
+        </form>
+
+           <div class="row">
+               <div class="col-sm-6">
+                    <h4><span class="glyphicon glyphicon-user"></span></h4>
+                    <h4>Eniola Adeniyi</h4>
+                    <h4><span class="glyphicon glyphicon-earphone"></span> 0807-951-0133</h4>
+               </div>
+               <div class="col-sm-6">
+                   <h4><span class="glyphicon glyphicon-user"></span></h4>
+                    <h4>David Ajayi</h4>
+                    <h4><span class="glyphicon glyphicon-earphone"></span> 0803-340-0811</h4>
+               </div>
+           </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block body2 %}
+    <div class="" id="ourStoryTitle">
+        <h2 class="display-2">Our story</h2>
+        <h4 class="display-2">
+            It's a simple but powerful love we share. It’s so basic,
+            so fundamental the workings are almost imperceptible.
+            We just know we have each other, want each other, want to
+            be with each other; there is no otherwise. Ours is a Tale
+            of a Ridiculous Faith. For our God is not a God of timelines.
+            He makes all things beautiful in its time.
+        </h4>
+        <hr>
+    </div>
+
+    <div class="col-md-6" id="ourStoryYemi">
+        <h3>Yemi,</h3>
+
+        <h4>
+            I thank God in my heart every day for the gift of you!
+            I am grateful God gave you to me. There’s a quality to
+            that gratitude that is difficult to express. There are
+            things that can’t be shared, things knowable only on the inside.
+            Truly, we both deserve happiness and that's the only explanation
+            of our coming together. My prince in shinning armour, my dependable Banty.
+        </h4>
+
+    </div>
+
+    <div class="col-md-6" id="ourStoryMolara">
+        <h3>Molara,</h3>
+
+        <h4>
+            You are as beautiful as Tirzah, my darling,
+            as lovely as Jerusalem,
+            as majestic as troops with banners.
+            Turn your eyes from me; they overwhelm me.
+            Your hair is like a flock of goats descending from Gilead.
+            Your teeth like a flock of sheep coming up from the washing.
+            Each has its twin, not one of them missing.
+            Your temples behind your veil like the halves of a pomegranate.
+            Sixty queens there may be, and eighty concubines, virgins beyond number;
+            but my dove, my perfect one, is unique.
+            The only daughter of her mother, the favorite of the one who bore her.
+            The young women saw her and called her blessed; the queens and concubines praised her.
+            You eyes truly overwhelm me, so is your smile.
+        </h4>
+    </div>
+{% endblock %}
+
+{% block body3 %}
+    <div class="">
+        <h2 class="display-2">Schedule</h2>
+        <h4 class="display-2">Saturday, July 14, 2018</h4>
+        <hr>
+    </div>
+{% endblock %}
+
+{% block body4 %}
+    <div class="col-md-6">
+        <table class="table">
+              <tbody>
+                <tr>
+                  <th  scope="row"><h4>11:00am</ha></th>
+                  <td>
+                      <h4>Wedding Ceremony</h4>
+                      <p>The Cathedral Church of St. John<br>
+                        Iloro Ilesa, Osun State</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        <iframe width="100%" height="450" frameborder="0" style="box-shadow: 5px 10px 8px #a09f9f;"
+        src="https://www.google.com/maps/embed/v1/place?q=cathedral%20of%20st%20john%20iloro%20ilesa&key=AIzaSyDG4prdoXK6kpLfV8gZDhzGNm7ceZ4eEsE"
+        allowfullscreen></iframe>
+    </div>
+
+    <div class="col-md-6">
+        <table class="table">
+              <tbody>
+                <tr>
+                  <th  scope="row"><h4>1:00pm</h4></th>
+                  <td>
+                      <h4>Wedding Reception</h4>
+                      <p>St. James Church Hall<br>
+                        Imo Ilesa, Osun State</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        <iframe width="100%" height="450" frameborder="0" style="box-shadow: 5px 10px 8px #a09f9f;"
+        src="https://www.google.com/maps/embed/v1/place?q=St.%20James%20Church%20Ilesa&key=AIzaSyCHbfjVXmejnYYVjYaqdPQZhmOs9Q6akYA"
+        allowfullscreen></iframe>
+    </div>
+{% endblock %}
+
+{% block body5 %}
+    <div>
+        <h2 class="display-2">Questions & Answers</h2>
+        <h4 id="faq">We hope you find answers to your questions about the events from our list of FAQ.</h4>
+        <hr>
+        <br>
+        <div id="questions">
+            <h4>Q. When is the RSVP deadline?</h4>
+            <p>Kindly respond as soon as you can, preferably by end of June.</p><br>
+
+            <h4>Q. Does your wedding have a theme?</h4>
+            <p>Yes, we have chosen Peach/Coral and Champagne as the theme colors. Feel free to wear any shades of these colors.</p><br>
+
+            <h4>Q. What time should I arrive?</h4>
+            <p>We would love guests to be seated at least 10 minutes before the ceremony starts.</p><br>
+
+            <h4>Q. Can I bring a plus one?</h4>
+            <p>Yes, your spouse and/or kids. Please also RSVP for them so we can include them in the planning.</p><br>
+
+            <h4>Q. Do you have a list or wish for gifts?</h4>
+            <p>If you were thinking of giving a gift to help us on our way, a gift of money in a card would really make our day!</p><br>
+
+            <h4>Q. I have a question not answered here; how do I contact you?</h4>
+            <p>We have two contact persons you can call for your questions.
+            Please see the RSVP section at the top of this page for the contact details.</p>
+        </div>
+    </div>
+{% endblock %}

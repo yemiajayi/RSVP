@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Responses{% endblock %}
+{% block body %}
+<div class="col-md-12">
+    <h3 id="responses">RESPONSES</h3>
+        {% for rsvp in all_rsvp %}
+            <div class="col-md-6">
+            <ol class="list-group">
+              <li class="list-group-item">
+                  <h4>{{ rsvp.first_name }} {{ rsvp.last_name }}</h4>
+                  <h4>{{ rsvp.email }} {{ rsvp.will_be_present }}</h4>
+              </li>
+            </ol>
+
+            </div>
+        {% endfor %}
+</div>
+{% endblock %}

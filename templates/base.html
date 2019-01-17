@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}M&Y{% endblock %}</title>
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Cookie|Great+Vibes|Indie+Flower|Lobster|Satisfy|Raleway|Tangerine|Lobster+Two">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvpapp/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+        <!-- header -->
+        <div class="navbar-header" role="navigation">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'create_rsvp' %}"><img src="../static/rsvpapp/ring.png"></a>
+        </div>
+
+    <!-- header items -->
+        <nav class="collapse navbar-collapse" id="topNavBar">
+
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="{% url 'create_rsvp' %}">
+                        <span class="" aria-hidden="true">RSVP</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#ourStory">
+                        <span class="" aria-hidden="true">Our story</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#schedule">
+                        <span class="" aria-hidden="true">Schedule</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#qa">
+                        <span class="" aria-hidden="true">Q & A</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row" id="indexRow">
+{% block body %}
+{% endblock %}
+</div>
+
+<a name="ourStory"></a>
+<div class="row" id="ourStoryRow">
+{% block body2 %}
+{% endblock %}
+</div>
+
+<a name="schedule"></a>
+<div class="row" id="scheduleTitle">
+{% block body3 %}
+{% endblock %}
+</div>
+
+<div class="row" id="scheduleRow">
+{% block body4 %}
+{% endblock %}
+</div>
+
+<a name="qa"></a>
+<div class="row" id="qaRow">
+{% block body5 %}
+{% endblock %}
+</div>
+
+</div>
+<footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+</footer>
+</body>
+</html>
